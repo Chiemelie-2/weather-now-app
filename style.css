@@ -1,0 +1,1297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap'); 
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+  --BGCOLOR: hsl(243, 96%, 9%);
+  --MNCOLOR: hsl(243, 27%, 20%);
+  --BLACK: hsl(243, 23%, 24%);
+  --BXCOLOR: hsl(243, 23%, 30%);
+  --BXCOLOR2: hsla(244, 21%, 28%, 0.792);
+  --BOCOLOR:hsl(243, 19%, 40%) ;
+  --TXTCOLOR: hsl(240, 6%, 70%);
+  --COLOR2: hsl(250, 6%, 84%);
+  --NEUTRAL: hsl(0, 0%, 100%);
+  
+  --BLUECOLOR: hsl(233, 67%, 56%);
+  --BLUENEUTRAL:hsl(248, 70%, 36%);
+  --ORANGECOLOR: hsl(28, 100%, 52%);
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: hsl(243, 96%, 9%) ;
+    font-weight: 700;
+    max-width: 1440px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 60px;
+    gap: 10px;
+}
+
+header{
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+#unitdrop {
+    color: white;
+    background-color: var(--BLACK);
+    position: absolute;
+    padding: .9rem;
+    width: 195px;
+    right: -.1rem;
+    display:none;
+    border-radius: .8rem;
+    flex-direction: column;
+    gap: .5em;
+    border: .1px solid var(--BXCOLOR);
+}
+
+#unitdrop.show{
+    display: flex;
+    z-index: 90;
+}
+
+hr {
+    opacity: .4;
+}
+
+#searchBtn:hover {
+    background: var(--BLUENEUTRAL);
+}
+
+#unitbtn{
+    color: white;
+    background: var(--BLACK);
+    padding: 10px ;
+    width: 100px;
+    height: 40px;
+    border-radius: .4rem;
+    margin-bottom: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .mini{
+        font-size: 9px;
+        font-weight: 200;
+        padding: 0px;
+        margin: 0px;
+        padding: 20px;
+
+    }
+        option{
+            font-size: 11px;
+            
+        }
+
+.option {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+     font-weight: 300;
+     font-size: .7rem;
+     width: 100%;
+     
+}
+.set {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* Hide the default checkbox */
+.custom-checkbox input {
+  display: none;
+  
+}
+.custom-checkbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Checkbox box */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  gap:50px;
+  align-items: center;
+  margin-right: 28px;
+  font-size: 16px;
+  color: transparent;  /* hide ✓ initially */
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+/* When checked → show the checkmark ✓ */
+.custom-checkbox input:checked + .checkmark {
+  color: #fff; /* show ✓ */
+}
+
+/* to display the  checkmark ✓ */
+.custom-checkbox .checkmark::before {
+  content: "✓";
+ 
+}
+.boxcolor{
+    background: var( --BXCOLOR);
+    padding: 7px 1px 2px 5px;
+    border-radius: 5px;
+}
+
+nav{
+    grid-column: 1/4;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+#form{
+    display: flex;
+    margin:30px 0px 20px 80px;
+}
+    input{
+        background-color:  hsl(243, 27%, 20%);
+        width: 370px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+
+    }
+    button{
+        margin-left: 10px;
+        border: none;
+        background-color:hsl(233, 67%, 56%) ;
+        color:  hsl(0, 0%, 100%);
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+main{
+
+    grid-column: 1/3;
+    width: 100%;
+    
+}
+    #veiw_image{
+        background-image:url(assets/images/bg-today-large.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        color: hsl(0, 0%, 100%);
+        height:310px ; 
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        width:100%;
+    }
+        .veiw_main{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap:30px ;
+            justify-content: space-evenly;
+            
+
+        }
+            .veiw_image_sub{
+                display: flex;
+                align-items: center;
+        
+            }
+
+            #temp{
+                font-size: 6rem;
+                font-weight: 600;
+                font-style: italic;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            #country{
+                font-size: 2.3rem;
+            }
+            #date{
+                margin-top: 15px;
+                font-weight: 400;
+                font-size: 1.3rem;
+            }
+#View_wealther{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+}   
+    .temperature{
+        grid-column: 1/2;
+        background-color: hsl(243, 23%, 24%);
+        padding: 10px;
+        border: 1px solid var(--BOCOLOR);
+        border-radius: 7px;
+        width: 90%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .humidity{
+        grid-column: 2/3;
+        background-color: hsl(243, 23%, 24%);
+        padding: 10px;
+        border: 1px solid var(--BOCOLOR);
+        border-radius: 7px;
+        width: 90%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    .wind{
+        grid-column: 3/4;
+        background-color: hsl(243, 23%, 24%);
+        padding: 10px;
+        border: 1px solid var(--BOCOLOR);
+        border-radius: 7px;
+        width: 90%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    .precipitation{
+        grid-column: 4/5;
+        background-color: hsl(243, 23%, 24%);
+        padding: 10px;
+        border: 1px solid var(--BOCOLOR);
+        border-radius: 7px;
+        width: 100%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+#daily_forecast_box{
+
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 10px;
+    img{
+        width: 70%;
+    }
+    #head{
+        grid-column: 1/8;
+        color: hsl(0, 0%, 100%);
+    }
+
+}
+    #forecast-box{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        overflow-x: auto;
+        
+    }
+    .daily_forecast{
+        width: 110px;
+        background:var(--BLACK);
+        color: var(--COLOR2);
+        border: .5px solid var(--BOCOLOR);
+        padding: 15px 5px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+        .forecast_text{
+            font-size: .8rem;
+            color: hsl(240, 6%, 70%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+aside{
+    grid-column: 3/4;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--BLACK);
+    color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 30px 25px 10px 25px;
+}   
+    #aside{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h2 {
+            font-size: 1rem;
+        }
+      
+    }
+
+        .custom-select {
+            grid-column: 4/5;
+            position: relative;
+            width: 200px;
+            border-radius: 15px;
+            color: black;
+            font-weight: 400;
+
+        }
+
+        .select-selected {
+            background-color: var(--BXCOLOR);
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            color: var(--NEUTRAL);
+            width: 100px;
+            position: absolute;
+            top: -1rem;
+            right: 0rem;
+        }
+
+        .select-items {
+            position: absolute;
+            background-color: var(--BLACK);
+            border: .1px solid var(--BXCOLOR);
+            border-radius: 10px;
+            width: 170px;
+            z-index: 99;
+            top: 2.5rem;
+            left: 2rem;
+            max-height: 300px;
+        }
+
+        .select-items div {
+            padding: 10px; /* Bigger boxes */
+            font-size: 12px;
+            font-weight: 400;
+            cursor: pointer;
+            color: var(--NEUTRAL);
+        }
+
+        .select-items div:hover {
+            background-color: var(--BXCOLOR2);
+            border-radius: 5px;
+            margin: 5px 7px;
+            color: var(--NEUTRAL);
+        }
+
+        .select-hide {
+            display: none;
+        }
+
+
+        .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            background:var(--BXCOLOR2);
+            border: 1px solid var(--BOCOLOR);
+            border-radius: 10px;
+            margin-top: 23px;
+            font-weight: 300;
+        }
+            .aside_image{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+            }
+
+            .hour-time{
+                font-weight: 450;
+            }
+             ::placeholder{
+        font-size: 1rem;
+        color: var(--TXTCOLOR);
+
+    }
+    #errorHeader{
+        margin: 40px;
+        padding: 0px 0px;
+    }
+    #errorBody{
+        height: 100vh;
+       
+    }
+    #errorPage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #errorMain{
+        margin: 1rem 0rem;
+        color: var(--TXTCOLOR);
+        text-align: center;
+        padding: 100;
+    }
+    .errorMessage{
+        padding-bottom: .4rem;
+        font-size: .8rem;
+    }
+    #but{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #errorBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+    }
+    
+
+@media (max-width: 1285px){
+       #main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 10px 0px 10px;
+        gap: 10px;
+
+    }
+
+        main{
+            grid-column: 1/2;
+    }
+        aside{
+            grid-column: 2/3;
+            width: 100%;
+        }
+}
+@media(max-width: 1026px) {
+    .daily_forecast{
+        max-width:73px;
+        padding: 15px 5px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        .forecast_text{
+            font-size: .6rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        aside{
+            grid-column: 2/4;
+        }
+}
+@media (max-width: 914px){
+      #veiw_image{
+        background-image:url(assets/images/bg-today-large.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        height:200px ; 
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        width:100%;
+    }
+        .veiw_main{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10px;
+
+        }
+            .veiw_image_sub{
+                display: flex;
+                align-items: center;
+                
+        
+            }
+              #temp{
+                font-size: 2.5rem;
+                font-weight: 600;
+                font-style: italic;
+            }
+
+            #date{
+                margin-top: 15px;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+    #View_wealther{
+        display: grid;
+        grid-template-columns:repeat(6, 1fr);
+        margin-top: 20px;
+        
+    }     
+        .temperature{
+        grid-column: 1/4;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        width: 90%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .humidity{
+        grid-column: 4/7;
+        padding: 10px;
+         margin-bottom: 20px;
+        border-radius: 7px;
+        width: 100%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    .wind{
+        grid-column: 1/4;
+        padding: 10px;
+        border-radius: 7px;
+        width: 90%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-weight: 400;
+        }
+    }
+    .precipitation{
+        grid-column: 4/7;
+        padding: 10px;
+        border-radius: 7px;
+        width: 100%;
+        p{
+            padding: 5px 5px;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        .nun{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    .daily_forecast{
+        font-size: .7rem;
+    }
+     .forecast_text{
+            font-size: .45rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+}
+
+
+@media (width: 920px){
+    h1{
+        font-size: 2rem;
+    }
+
+    #form{
+    display: flex;
+    margin: 30px 0px 20px 0px;
+}
+      button{
+        margin-left: 10px;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+    #main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 10px 0px 50px;
+    gap: 10px;
+    }
+
+    main{
+        grid-column: 1/2;
+    }
+    aside{
+         grid-column: 2/3;
+         width: 90%;
+    }
+     .select-selected {
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+        }
+
+    header{
+        margin: 0px 50px 0px 10px;
+    }
+
+     .daily_forecast{
+        font-size: .6rem;
+    }
+     .forecast_text{
+            font-size: .45rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #aside{
+            margin-bottom: 10px;
+            margin-right:20px ;
+        }
+        .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 11px;
+            font-weight: 300;
+           
+        }
+}
+@media (max-width: 920px){
+    h1{
+        font-size: 2rem;
+    }
+
+    #form{
+    display: flex;
+    margin: 30px 0px 20px 0px;
+}
+      button{
+        margin-left: 10px;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+    #main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 10px 0px 50px;
+    gap: 10px;
+    }
+
+    main{
+        grid-column: 1/2;
+    }
+    aside{
+         grid-column: 2/3;
+         width: 90%;
+    }
+     .select-selected {
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+        }
+
+    header{
+        margin: 0px 50px 0px 10px;
+    }
+
+     .daily_forecast{
+        font-size: .7rem;
+    }
+     .forecast_text{
+            font-size: .45rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+ 
+        #aside{
+            margin-bottom: 10px;
+            margin-right:20px ;
+        }
+        .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 11px;
+            font-weight: 300;
+           
+        }
+}
+@media (max-width: 670px){
+     .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 14px;
+            font-weight: 300;
+           
+        }
+}
+@media (max-width: 415px) {
+    #main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 30px;
+    gap: 10px;
+}
+
+    header{
+        grid-column: 1/4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-right: 0px;
+
+    
+
+    }
+    #logo img{
+        width: 50%;
+    }
+    #unitbtn{
+        width: 100%;
+        font-size: .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 25px;
+
+    }    
+    #unitbtn img{
+            width:30%;
+        }
+    
+    main{
+        grid-column: 1/4;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    #form{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #form input{
+        height: 50px;
+        border-radius: 10px;
+    }
+    ::placeholder{
+        font-size: 1.2rem;
+        color: var(--COLOR2);
+    }
+    button{
+        margin-left: 0px;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 10px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+      #veiw_image{
+        background-image:url(assets/images/bg-today-small.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        color: hsl(0, 0%, 100%);
+        height:300px; 
+      
+        padding: 0px 20px;
+        width:100%;
+    }
+        .veiw_main{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0px 10px;
+            gap: 20px;
+
+        }
+            .veiw_image_sub{
+               text-align: center;
+               width: 100%;
+        
+            }
+              #temp{
+                font-size: 4rem;
+                font-weight: 600;
+                font-style: italic;
+            }
+            #country{
+                text-align: center;
+                font-size: 1.5rem;
+            
+            }
+            #tempImg img{
+                width: 80%;
+            }
+            #date{ 
+                margin-top: 15px;
+                font-weight: 300;
+                font-size: 1rem;
+               text-align: center;
+            }
+            
+        #forecast-box{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: fit-content;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            img{
+                width: 100%;
+            }
+        }
+         
+    .daily_forecast{
+        width: 190px;
+        padding: 15px 5px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    aside{
+        grid-column: 1/4;
+        width: fit-content;
+
+    }
+    .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            width: 100%;
+            background:var(--BXCOLOR);
+            border: 1px solid var(--BLACK);
+            border-radius: 10px;
+            margin-top: 11px;
+            font-weight: 300;
+           
+        }
+        
+        .select-selected {
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+            position: absolute;
+            top: 0rem;
+            right: -1rem;
+        }
+
+}
+@media (max-width: 376px) {
+    #main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 30px;
+    gap: 10px;
+}
+
+    header{
+        grid-column: 1/4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-right: 0px;
+
+    
+
+    }
+    #logo img{
+        width: 50%;
+    }
+    #unitbtn{
+        width: 100%;
+        font-size: .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 25px;
+
+    }    
+    #unitbtn img{
+            width:30%;
+        }
+    
+    main{
+        grid-column: 1/4;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 700;
+    }
+    #form{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 125%;
+    }
+    #form input{
+        height: 50px;
+        border-radius: 10px;
+        width: 80%;
+    }
+   
+    button{
+        margin-left: 0px;
+       width: 80%;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 10px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+      #veiw_image{
+        background-image:url(assets/images/bg-today-small.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        height:300px; 
+      
+        padding: 0px 20px;
+        width:100%;
+    }
+        .veiw_main{
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+            padding: 0px 10px;
+            gap: 20px;
+
+        }
+            .veiw_image_sub{
+               text-align: center;
+        
+            }
+              #temp{
+                font-size: 2.5rem;
+                font-weight: 600;
+                font-style: italic;
+            }
+
+            #date{
+                margin-top: 15px;
+                font-weight: 300;
+                font-size: 1rem;
+                margin-left: 60px;
+            }
+            
+            #View_wealther{
+               gap: 10px;
+            }
+    .temperature{
+        height: 100%;
+        width: 100%;
+        margin-right: 10px ;
+    }
+
+    .humidity{
+        width: 100%;
+        height: 100%;
+    }
+    .wind{
+        width: 100%;
+        height: 100%;
+       
+    }
+    .precipitation{
+        width: 100%;
+        height: 100%;
+       
+    }
+   
+    aside{
+        grid-column: 1/4;
+        width: 100%;
+
+
+    }
+    
+    .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 11px;
+            font-weight: 300;
+           
+        }
+       
+        .select-selected {
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+        }
+
+        
+
+}
+@media (max-width: 365px) {
+    #main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 30px;
+    gap: 10px;
+}
+
+    header{
+        grid-column: 1/4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-right: 0px;
+
+    
+
+    }
+    #logo img{
+        width: 50%;
+    }
+    #unitbtn{
+        width: 100%;
+        font-size: .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 25px;
+
+    }    
+    #unitbtn img{
+            width:30%;
+        }
+    
+    main{
+        grid-column: 1/4;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 700;
+    }
+    #form{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 125%;
+    }
+    #form input{
+        height: 50px;
+        border-radius: 10px;
+        width: 80%;
+    }
+   
+    button{
+        margin-left: 0px;
+        width: 80%;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 10px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+      #veiw_image{
+        background-image:url(assets/images/bg-today-small.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        height:300px; 
+      
+        padding: 0px 20px;
+        width:100%;
+    }
+        .veiw_main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+            padding: 0px 10px;
+            gap: 20px;
+
+        }
+            #View_wealther{
+               gap: 10px;
+            }
+    .temperature{
+        height: 100%;
+        width: 100%;
+        margin-right: 10px ;
+    }
+    #country{
+        text-align: center;
+    }
+    #date{
+        text-align: center;
+    }
+
+    .humidity{
+        width: 100%;
+        height: 100%;
+    }
+    .wind{
+        width: 100%;
+        height: 100%;
+       
+    }
+    .precipitation{
+        width: 100%;
+        height: 100%;
+       
+    }
+        #forecast-box{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            img{
+                width: 100%;
+            }
+        }
+         
+    .daily_forecast{
+        width: fit-content;
+        padding: 15px 5px;
+        border-radius: 7px;
+       
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    aside{
+        grid-column: 1/4;
+        width: 100%;
+
+
+    }
+    
+    .aside_time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 50px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 11px;
+            font-weight: 300;
+           
+        }
+       
+        .select-selected {
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            width: 100px;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+        }
+        .veiw_main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+}

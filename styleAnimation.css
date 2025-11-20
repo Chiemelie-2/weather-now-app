@@ -1,0 +1,76 @@
+
+
+/* Animation Style sheet with error page */
+:root {
+  --BGCOLOR: hsl(243, 96%, 9%);
+  --MNCOLOR: hsl(243, 27%, 20%);
+  --BLACK: hsl(243, 23%, 24%);
+  --BXCOLOR: hsl(243, 23%, 30%);
+  --TXTCOLOR: hsl(240, 6%, 70%);
+  --COLOR2: hsl(250, 6%, 84%);
+  --NEUTRAL: hsl(0, 0%, 100%);
+
+  --BLUECOLOR: hsl(233, 67%, 56%);
+  --BLUENEUTRAL:hsl(248, 70%, 36%);
+  --ORANGECOLOR: hsl(28, 100%, 52%);
+}
+
+
+#unitbtn:hover,
+ #unitbtn:focus{
+    border: 3px solid var(--BGCOLOR);
+    outline: 2px  solid var(--COLOR2);
+
+}
+.select-selected:hover,
+.select-selected:focus{
+     border: 3px solid var(--BGCOLOR);
+    outline: 2px  solid var(--COLOR2);
+}
+#use-gps-btn:focus,
+#searchBtn:focus {
+     border: 3px solid var(--BGCOLOR);
+    outline: 2px  solid var(--BLUECOLOR);
+}
+#use-gps-btn{
+    background: var(--BLUECOLOR);
+}
+#searchBtn{
+    background: var(--BLUECOLOR);
+}
+
+#searchBtn:hover{
+    background:var(--BLUENEUTRAL) ;
+}
+#use-gps-btn:hover{
+    background:var(--BLUENEUTRAL) ;
+}
+input:hover,
+input:focus{
+    border: 3px solid var(--BGCOLOR);
+    outline: 2px  solid var(--COLOR2);
+}
+#tempImg,
+#tempImg,
+#temp{
+    position: relative;
+}
+#tempImg::before,
+#tempImg::after,
+#temp::before{
+    content: "";
+}
+#tempImg::before,
+#tempImg::after,
+#temp::before{
+    width: 10px;
+    height: 10px;
+    background-color: var(--BXCOLOR);
+    z-index: 100;
+    position: absolute;
+}
+/* .searchAnimation{
+    background: var(--BLACK);
+    padding: 10px;
+    border-radius: 10px;
+} */

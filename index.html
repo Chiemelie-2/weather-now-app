@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="50x60" href="../assets/images/logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleAnimation.css">
+  <title> Weather Now</title>
+  <!--Tuesday, Aug 5, 2025 date for the ui date for the js 15/11/2025-->
+</head>
+<body>
+  <div id="main">
+    <header> 
+      <div id="logo">
+        <img src="assets/images/logo.svg" alt="">
+      </div>
+
+        <div id="bars">
+            <p id="unitbtn" ><img src="assets/images/icon-units.svg"alt="sitting"> Units      </p>
+            <div id="unitdrop">
+                <p>Switch to Imperial</p>
+                
+                <div class="option">
+                    <legend>Temperature</legend>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="temp" id="Celsius" value="celsius" checked >Celsius (℃)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="temp" id="Fahrenheit" value="fahrenheit">Fahrenheit (℉)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+                <hr>
+                <div class="option">
+                    <p>Wind Speed</p>
+                    <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="wind" id="Mph" value="mph">Mph
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                    <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="wind" id="km" value="km" checked>Km
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+                <hr>
+                <div class="option"> 
+                    <p>Precipitation</p>
+                
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="precip" id="Millimeters" value="mm" checked>Millimeters(mm)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="precip" id="Inches" value="in">Inches (in)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav>
+      <h1>How's the sky looking today?</h1>
+      <section id="form">
+            <input type="text" name="search" id="searchinput" list="search" placeholder="🔍 &nbsp;Search for a place....">
+                <datalist id="search">
+                    <option value="Nnewi">
+                    <option value="Awka">
+                    <option value="Jos">
+                    <option value="Onisha">
+                    <option value="Ogun">
+                    <option value="Kano">
+                    <option value="Rivers">
+                    <option value="Benin">
+                    <option value="Abia">
+                    <option value="Lagos">
+
+                </datalist> 
+            <button  type="button" id="searchBtn" >Search</button>
+     </section>
+    </nav>
+    <main>
+      
+        <div id="veiw_image">
+
+          <div class="veiw_main">
+            <div class="veiw_text_sub">
+                <h2 id="country"></h2>
+                <p id="date"></p>
+            </div>
+
+            <div class="veiw_image_sub">
+              <div id="tempImg">
+
+              </div>
+              <h2 id="temp"></h2>
+            </div>
+          </div>
+
+        </div>
+      
+
+      <div id="View_wealther">
+        <!-- Insert temperature here -->
+        <div class="temperature">
+            <p class="name">Feel Like</p>
+            <p class="nun" id="feel">_</p>
+        </div>
+        <!-- Insert humidity here -->
+        <div class="humidity">
+            <p class="name"> Humidity</p>
+            <p class="nun" id="humidity">_</p>
+        </div>
+        <!-- Insert wind here -->  
+        <div class="wind">
+            <p class="name">Wind</p>
+            <p class="nun" id="wind">_</p>
+        </div>
+        <!-- Insert precipitation here -->
+          <div class="precipitation">
+            <p class="name"> Precipitation</p>
+            <p class="nun" id="precipitation">_</p>
+          </div>
+      </div>
+
+      <!-- Insert daily forecast for the next 7 days here -->
+
+      <div id="daily_forecast_box">
+        <div id="head">
+           <p> Daily forecast</p>
+        </div>
+
+        <div id="forecast-box">
+          <div class="daily_forecast" id="firstBox">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text">
+              <p> </p>
+              <p> </p>
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text"> 
+              <p> </p> 
+              <p></p> 
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text">  
+              <p> </p> 
+              <p></p> 
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+              <img src="" alt="">
+            <div class="forecast_text">  
+              <p> </p> 
+              <p></p> 
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text">  
+              <p> </p> 
+              <p> </p> 
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text">
+              <p> </p> 
+              <p> </p> 
+            </div>
+          </div> 
+
+          <div class="daily_forecast">
+            <p></p>
+            <img src="" alt="">
+            <div class="forecast_text">
+              <p></p> 
+              <p></p> 
+            </div>
+          </div> 
+        </div>
+      </div>
+    </main>
+
+    <aside>
+<!-- Hourly forecast -->
+    <div id="aside">
+      <div class="text">
+        <h2> Hourly forecast</h2>
+      </div>
+      
+      <div id="bar">
+        <div class="custom-select">
+          <div class="select-selected" data-index="0">_</div>
+            <div class="select-items select-hide">
+              <div data-index="0"></div>
+              <div data-index="1"></div>
+              <div data-index="2"></div>
+              <div data-index="3"></div>
+              <div data-index="4"></div>
+              <div data-index="5"></div>
+              <div data-index="6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!---->
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt="" width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt="" width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt=""width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt=""width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt=""width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt="" width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt=""width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+
+      <div class="aside_time">
+        <div class="aside_image">
+          <img src="" alt="" width="40">
+          <p class="hour-time"></p>
+        </div>
+        <p class="hour-temp"></p>
+      </div>
+    </aside>
+  </div>
+  <div class="attribution">
+    <p>Coded by &copy;Samuel</p>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

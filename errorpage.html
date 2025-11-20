@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>Error</title>
+</head>
+<body id="errorBody">
+    <header id="errorHeader">
+      <div id="logo">
+        <img src="assets/images/logo.svg" alt="">
+      </div>
+
+        <div id="bars">
+            <p id="unitbtn" ><img src="assets/images/icon-units.svg"alt="sitting"> Units      </p>
+            <div id="unitdrop">
+                <p>Switch to Imperial</p>
+                
+                <div class="option">
+                    <legend>Temperature</legend>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="temp" id="Celsius" value="celsius" checked >Celsius (℃)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="temp" id="Fahrenheit" value="fahrenheit">Fahrenheit (℉)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+                <hr>
+                <div class="option">
+                    <p>Wind Speed</p>
+                    <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="wind" id="Mph" value="mph">Mph
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                    <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="wind" id="km" value="km" checked>Km
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+                <hr>
+                <div class="option"> 
+                    <p>Precipitation</p>
+                
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="precip" id="Millimeters" value="mm" checked>Millimeters(mm)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                <p class="set">  
+                        <label class="custom-checkbox">
+                        <input type="radio" name="precip" id="Inches" value="in">Inches (in)
+                        <span class="checkmark"></span>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+   <div class="errorPage">
+        <nav id="errorNav">
+            <img src="assets/images/icon-error.svg" alt=""width="40">
+            <h1 id="error">Something went wrong</h1>
+        </nav>
+        <main id="errorMain">
+            <p class="errorMessage">We couldn't connect to the server (API error). Plaese try </p>
+            <p class="errorMessage">again in a few moment </p>
+        </main>
+        <div id="but">
+             <button type="button" id="errorBtn"><img src="assets/images/icon-retry.svg" alt="retry"> Retry</button>
+        </div>
+       
+    </div>
+    <script src="mainError.js"></script>
+</body>
+</html>
